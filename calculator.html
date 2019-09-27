@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head> <b><center><h1><font color="green">CALCULATOR<font></h1></head>
+<center>
+
+      <script> 
+
+        
+         function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+           
+        
+         function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+           
+        
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         } 
+      </script> 
+      <!-- for styling -->
+      <style> 
+         .title{ 
+         margin-bottom: 10px; 
+         text-align:center; 
+         width: 210px; 
+         color:green; 
+         border: solid black 2px; 
+         } 
+  
+         input[type="button"] 
+         { 
+         background-color:green; 
+         color: black; 
+         border: solid black 2px; 
+         width:100% 
+         } 
+  
+         input[type="text"] 
+         { 
+         background-color:white; 
+         border: solid black 2px; 
+         width:100% 
+         } 
+      </style> 
+   </head> 
+   <!-- create table -->
+   <body> 
+<body background="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoNDQ0NDQ0NDQ0NDQ0HCA0IDQ8IDQgNFREWFhURExMYHSggGBolGxMTITEhJSkrLjouFx8zOD8sNygtLisBCgoKCgwNDg8KDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKgBKwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIDBAf/xAAlEAEBAQEAAQQBAwUAAAAAAAAAARECAxIhMUHhE1GhImFxkfH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A+wyNYvMq0GMMbnK+kGPSljrEoOV5S8utXxT+qf7Bzng7v5T9K7lj2p1PwDzzw/3ZvOPQ5+X6Bx6iNdJIBIuLIuAc+zV6qYYDNZxrCQGfSel0kX0g5elqRrDAa441v9KHivy6A8nfOJI6eazWeQMMb551v0QHCwxruMgYioDrx0de7EaBixnHSsg7cxO57HPSd9A1IrlOlvQBU1LQLWZ3Zdn/AFUwHeefn72fy5+Tzb8fE9/8sYYDc8rNqekkAWRZG5AZwasQFxueJni+8egHn78djGPT5Ph56BGmFlBrCwUGUvd/daxQTNbnNTitgvjrdcj1UE8jMi2EAw9LS4DMi4oDNjGOlZoLFvFa8XLeA89iOvcJyDmY6dcJgMYY3iWAzjU4OPluAxhjrhYDlI3EsWAlZrbNgMunPlsc0Bvru1kWQEdPHGLGuKDo5Vu9Rz0Cs1UBGpWVBoSNQERu4wCrGXTmAg1jOAlZarIO8Xq+zE6idUEta5YspLYDuz3PYncv5TvufEBgsItBzanRjNgOs6L1HJQa3WoxG4BWa0zQYqNVAI2w1AMaxI1ATGK6ViwGUUBBQG/FxvvXW8T9mfFfbHQHHqYzjr3PtgGca5qKDWsigzWW6wDUakSNyAuM9z2/lrWe6DkNYYBFTFgLjPUdE6gOcb54R1gOd4xHWuQCVowGKY1i4DGEbrOAsXUQGkAEqNAMGNpgLHXn4cmuesBtx6rd7YoJqsrAV08cc3Tx9fQNXmOPXPu72uNvuC8OjnGvUC9MloCYRSA3Iz1PtpnqgmpaRQZWdWGJgLerUigKIoCVQEMCAuM42YDGDQDK41xGwcRevlAAAEUAFAZGqyCgAqoAKRQSKshgIlUBBqRcBlG8SgzhiwBBUoIoAiwUAAEAA1b2iAihABcARGlnIMq3kZsBKy0AyK1OKCYY1hgIqYsBQgCYYoAqACVUwEFxMADFwEXFgCYYoCYjSYDNFoCCmAmNSGKAzWgGV5LEBtnpABFxcBludJhgKKgANSAg0yCCoAKAigAigAAICggoCC4uAxhjVQExZBqAmI0gAAIYqgxhjWAIKAgqAoACxFBUAEAAUAEUBAAAAAUAACKgBUVACAC6i4YCKAAACKAgKCYYoAAAAAAAAAAAAAAAAAACgAgAAAAAKACAAAAAAAAqAD//2Q=="><br>
+      
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td> 
+            <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+            <td><input type="button" value="3" onclick="dis('3')"/> </td> 
+            <td><input type="button" value="/" onclick="dis('/')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="dis('4')"/> </td> 
+            <td><input type="button" value="5" onclick="dis('5')"/> </td> 
+            <td><input type="button" value="6" onclick="dis('6')"/> </td> 
+            <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+            <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+            <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+            <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="dis('.')"/> </td> 
+            <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" value="*" onclick="dis('*')"/> </td> 
+         </tr> 
+
+      </table> 
+   </body> 
+</html>  <br><br><br><br><br><br>  
+<marquee><b><h1>THANKS FOR WISTING TO MY WEBSITE</h1></b></marquee>
